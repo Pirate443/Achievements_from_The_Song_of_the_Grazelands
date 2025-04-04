@@ -1,4 +1,5 @@
 local sb_achievements = require("sb_achievements.interop")
+local i18n = mwse.loadTranslations("SotG.Achievements")
 local colours = {
 		greenSotG  = { 63 / 255, 193 / 255, 55 / 255 },
 		}
@@ -13,7 +14,7 @@ local function checkBook(e)
 
 local function initializedcheckBook()
 		SotGBook = false
-		if tes3.player.data.achievements.SotG_5 == false and not event.isRegistered("bookGetText", checkBook)
+		if not tes3.player.data.achievements.SotG_5 and not event.isRegistered("bookGetText", checkBook)
 		then 
 		event.register("bookGetText", checkBook)
 		end
@@ -24,10 +25,10 @@ local function init()
 	local iconPath = "Icons\\SotG\\"
 
 	local cats = {
-		main = sb_achievements.registerCategory("Main Quest"),
-		side = sb_achievements.registerCategory("Side Quest"),
-		faction = sb_achievements.registerCategory("Faction"),
-		misc = sb_achievements.registerCategory("Miscellaneous")
+		main = sb_achievements.registerCategory(i18n("Main Quest")),
+		side = sb_achievements.registerCategory(i18n("Side Quest")),
+		faction = sb_achievements.registerCategory(i18n("Faction")),
+		misc = sb_achievements.registerCategory(i18n("Miscellaneous"))
 	}
 
 	sb_achievements.registerAchievement {
@@ -38,7 +39,7 @@ local function init()
 		end,
 		icon = iconPath .. "SotG_Deserters.tga",
 		colour = colours.greenSotG,
-		title = "Death to Traitors", desc = "Carry out a just execution of the deserters.",
+		title = i18n("SotG_Deserters.Name"), desc = i18n("SotG_Deserters.Desc"),
 		configDesc = sb_achievements.configDesc.hideDesc,
 		lockedDesc = sb_achievements.lockedMessage.steamKeepPlaying
 	}
@@ -51,7 +52,7 @@ local function init()
 		end,
 		icon = iconPath .. "SotG_Pal.tga",
 		colour = colours.greenSotG,
-		title = " Oh, Those Scientists...", desc = "Help Edouard Vertainne solve his problems.",
+		title = i18n("SotG_Pal.Name"), desc = i18n("SotG_Pal.Desc"),
 		configDesc = sb_achievements.configDesc.hideDesc,
 		lockedDesc = sb_achievements.lockedMessage.steamKeepPlaying
 	}
@@ -64,7 +65,7 @@ local function init()
 		end,
 		icon = iconPath .. "SotG_Mabrigash.tga",
 		colour = colours.greenSotG,
-		title = "New Friends", desc = "Help Tahimsa-Ti deal with her worries.",
+		title = i18n("SotG_Mabrigash.Name"), desc = i18n("SotG_Mabrigash.Desc"),
 		configDesc = sb_achievements.configDesc.hideDesc,
 		lockedDesc = sb_achievements.lockedMessage.steamKeepPlaying
 	}
@@ -77,7 +78,7 @@ local function init()
 		end,
 		icon = iconPath .. "SotG_Vert.tga",
 		colour = colours.greenSotG,
-		title = "I'm Not an Artist!", desc = "I don't think anyone would want to help him.",
+		title = i18n("SotG_Vert.Name"), desc = i18n("SotG_Vert.Desc"),
 		configDesc = sb_achievements.configDesc.hideDesc,
 		lockedDesc = sb_achievements.lockedMessage.steamKeepPlaying
 	}
@@ -90,7 +91,7 @@ local function init()
 		end,
 		icon = iconPath .. "SotG_Song.tga",
 		colour = colours.greenSotG,
-		title = "The Song of the Grazelands", desc = "Read the Song of the Grazelands",
+		title = i18n("SotG_Song.Name"), desc = i18n("SotG_Song.Desc"),
 		configDesc = sb_achievements.configDesc.hideDesc,
 		lockedDesc = sb_achievements.lockedMessage.steamKeepPlaying
 	}
