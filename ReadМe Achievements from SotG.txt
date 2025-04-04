@@ -2,7 +2,7 @@
 --------------------------------------------------------------
 Achievements from The Song of the Grazelands
 --------------------------------------------------------------
-Version 1.1
+Version 1.2
 Scripting: Pirate
 Achievement descriptions: MaximDi
 Icons loaded from https://games-icons.net under CC BY 3.0 license.
@@ -27,6 +27,9 @@ The Song of the Grazelands
 Copy the "Data Files" to your game folder or use a mod manager.
 ----------------------------------------------------------------
 			Changelogs:
+Version 1.2
+- Add i18n (English and Russian languages).
+
 Version 1.1
 - added check of "bookGetText" event registration.
 
