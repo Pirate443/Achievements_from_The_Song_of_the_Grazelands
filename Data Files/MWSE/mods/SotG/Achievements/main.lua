@@ -13,7 +13,7 @@ local function checkBook(e)
 
 local function initializedcheckBook()
 		SotGBook = false
-		if tes3.player.data.achievements.SotG_5 == false
+		if tes3.player.data.achievements.SotG_5 == false and not event.isRegistered("bookGetText", checkBook)
 		then 
 		event.register("bookGetText", checkBook)
 		end
