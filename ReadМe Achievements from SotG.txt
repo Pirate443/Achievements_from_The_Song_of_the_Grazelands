@@ -1,0 +1,31 @@
+		The Elder Scrolls III MorrowinD
+--------------------------------------------------------------
+Achievements from The Song of the Grazelands
+--------------------------------------------------------------
+Version 1.0
+Scripting: Pirate
+Achievement descriptions: MaximDi
+Icons loaded from https://games-icons.net under CC BY 3.0 license.
+Acknowledgments:
+Kalinter and DimNusens for the original mod 'The Song of the Grazelans'
+Safebox for The Achievement Framework.
+--------------------------------------------------------------
+			Description:
+This is a small mod - integration, adds five achievements for the mod 'The Song of the Grazelands' based on 'The Achievement Framework'.
+Can be connected before or after completing quests. If connected after completion, achievements will unlock upon loading a save.
+--------------------------------------------------------------
+			Requirements:
+Morrowind
+Tribunal
+Bloodmoon
+Morrowind Code Patch
+MGE XE 0.17.0 + (Run MWSE-update.exe)
+The Achievement Framework
+The Song of the Grazelands
+--------------------------------------------------------------
+			Installation:
+Copy the "Data Files" to your game folder or use a mod manager.
+----------------------------------------------------------------
+			Changelogs:
+Version 1.0
+- Initial Release.
